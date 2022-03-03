@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sở Thích Của Bạn</title>
+    <style>
+        input {
+            margin-left: 20px;
+        }
+
+        div.formInput {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body style="background-color: aqua">
+<div style="background-color: white; padding:10px 10px 300px 10px">
+    <div style="text-align: center; background-color: red; line-height: 30px; font-family: Arial;
+    font-size: 20px; color: white;">SỞ THÍCH CỦA BẠN
+    </div>
+    <form>
+        <div class="formInput"><label style="color: blue">Họ và tên </label><input type="text" name="yourname"></div>
+        <div class="formInput"><label style="padding-right: 23px;color: blue">Email </label><input type="text" name="email"></div>
+        <div class="formInput">
+            <label style="color:blue;float:left;display: block; height: 60px">Sở thích</label>
+            <div class="divCheckBox" style="width: 500px">
+                <input type="checkbox" class="formCheckBox"><label>Thể Thao</label>
+                <input type="checkbox" class="formCheckBox"><label>Âm Nhạc</label>
+                <input type="checkbox" class="formCheckBox"><label>Đọc Sách</label><br>
+                <input type="checkbox" class="formCheckBox"><label>Lướt Web</label>
+                <input type="checkbox" class="formCheckBox"><label>Chơi Game</label>
+                <input type="checkbox" class="formCheckBox"><label>Điện Ảnh</label><br>
+                <input type="checkbox" class="formCheckBox"><label>Du Lich</label>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Gửi Thông Tin">
+            <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+</div>
+</body>
+</html>

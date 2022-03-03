@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Ký Học Viên</title>
+    <style>
+        .inputLabel{
+            float: left;
+            display: block;
+            width: 100px;
+        }
+        .formInput{
+            height: 50px;
+        }
+        form{
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: white">
+<div style="background-color: khaki; padding:10px 10px 300px 10px">
+    <div style="padding-left: 10px ;background-color: aqua; line-height: 30px; font-family: Arial;
+    font-size: 20px; color: blue; font-weight: bold">ĐĂNG KÝ HỌC VIÊN
+    </div>
+    <form>
+        <div class="formInput"><label style="color: blue" class="inputLabel">Họ và tên </label><input type="text" name="yourname"></div>
+        <div class="formInput"><label style="color: blue" class="inputLabel">Ngày Sinh </label><input type="text" name="birthday"></div>
+        <div class="formInput">
+            <label style="color:blue" class="inputLabel">Giới Tính</label>
+            <input type="radio" name="male"><label>Nam</label>
+            <input type="radio" name="female"><label>Nữ</label>
+        </div>
+        <div class="formInput">
+            <label style="color:blue" class="inputLabel">Địa chỉ</label>
+            <input type="text" style="line-height: 35px;width: 170px" name="address">
+        </div>
+        <div class="formInput">
+            <label style="color:blue" class="inputLabel">Lớp</label>
+            <select>
+                <option value="">-Chọn lớp-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <div class="formInput"><label style="color: blue" class="inputLabel">Email</label><input type="text" name="email"></div>
+        <div class="formInput"><label style="color: blue" class="inputLabel">Điện thoại</label><input type="text" name="phone"></div>
+        <div class="formInput">
+            <input type="submit" value="Gửi Thông Tin">
+            <input type="reset" style="margin-left: 50px" value="Nhập lại">
+        </div>
+    </form>
+</div>
+</body>
+</html>
