@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị đầu ra</title>
+    <script>
+        function showMessenger() {
+            document.getElementById('msgDiv').innerHTML = 'Xin Chào';
+        }
+        function showMessenger1() {
+            alert('Xin Chào');
+        }
+        function showMessenger2() {
+            document.write('Xin Chào!');
+        }
+        function showMessenger3() {
+            console.log('Xin Chào!');
+        }
+    </script>
+    <style>
+        button{
+            float: left;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="showMessenger1()">Click Me!</button>
+    <div id="msgDiv"></div>
+    <button type="button" onclick="showMessenger()">Click Me!</button>
+    <button type="button" onclick="showMessenger2()">Click Me!</button>
+    <button type="button" onclick="showMessenger3()">Click Me!</button>
+</body>
+</html>

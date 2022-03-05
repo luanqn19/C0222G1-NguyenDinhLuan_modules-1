@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bàn cờ vua</title>
+    <style>
+        table {
+            width: 40%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: orange;
+        }
+
+        tr, td, th {
+            border: 1px solid;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        function paint() {
+            let arrayIndex = [
+                [1, 2, 3, 4, 5, 6, 7, 8],
+                [9, 10, 11, 12, 13, 14, 15, 16],
+                [17, 18, 19, 20, 21, 22, 23, 24],
+                [25, 26, 27, 28, 29, 30, 31, 32],
+                [33, 34, 35, 36, 37, 38, 39, 40],
+                [41, 42, 43, 44, 45, 46, 47, 48],
+                [49, 50, 51, 52, 53, 54, 55, 56],
+                [57, 58, 59, 60, 61, 62, 63, 64],
+            ];
+            for (var i = 0; i < 8; i++) {
+                for (var j = 0; j < 8; j++) {
+                    if (i % 2 === 0 && arrayIndex[i][j] % 2 === 0) {
+                        document.getElementById(arrayIndex[i][j].toString()).style.backgroundColor = "black";
+                    } else if (i % 2 !== 0 && arrayIndex[i][j] % 2 !== 0) {
+                        document.getElementById(arrayIndex[i][j].toString()).style.backgroundColor = "black";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <th></th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+    </tr>
+    <tr>
+        <th>A</th>
+        <td id="1"></td>
+        <td id="2"></td>
+        <td id="3"></td>
+        <td id="4"></td>
+        <td id="5"></td>
+        <td id="6"></td>
+        <td id="7"></td>
+        <td id="8"></td>
+    </tr>
+    <tr>
+        <th>B</th>
+        <td id="9"></td>
+        <td id="10"></td>
+        <td id="11"></td>
+        <td id="12"></td>
+        <td id="13"></td>
+        <td id="14"></td>
+        <td id="15"></td>
+        <td id="16"></td>
+    </tr>
+    <tr>
+        <th>C</th>
+        <td id="17"></td>
+        <td id="18"></td>
+        <td id="19"></td>
+        <td id="20"></td>
+        <td id="21"></td>
+        <td id="22"></td>
+        <td id="23"></td>
+        <td id="24"></td>
+    </tr>
+    <tr>
+        <th>D</th>
+        <td id="25"></td>
+        <td id="26"></td>
+        <td id="27"></td>
+        <td id="28"></td>
+        <td id="29"></td>
+        <td id="30"></td>
+        <td id="31"></td>
+        <td id="32"></td>
+    </tr>
+    <tr>
+        <th>E</th>
+        <td id="33"></td>
+        <td id="34"></td>
+        <td id="35"></td>
+        <td id="36"></td>
+        <td id="37"></td>
+        <td id="38"></td>
+        <td id="39"></td>
+        <td id="40"></td>
+    </tr>
+    <tr>
+        <th>F</th>
+        <td id="41"></td>
+        <td id="42"></td>
+        <td id="43"></td>
+        <td id="44"></td>
+        <td id="45"></td>
+        <td id="46"></td>
+        <td id="47"></td>
+        <td id="48"></td>
+    </tr>
+    <tr>
+        <th>G</th>
+        <td id="49"></td>
+        <td id="50"></td>
+        <td id="51"></td>
+        <td id="52"></td>
+        <td id="53"></td>
+        <td id="54"></td>
+        <td id="55"></td>
+        <td id="56"></td>
+    </tr>
+    <tr>
+        <th>H</th>
+        <td id="57"></td>
+        <td id="58"></td>
+        <td id="59"></td>
+        <td id="60"></td>
+        <td id="61"></td>
+        <td id="62"></td>
+        <td id="63"></td>
+        <td id="64"></td>
+    </tr>
+</table>
+<button type="button" onclick="paint()">Click Me!</button>
+</body>
+</html>
