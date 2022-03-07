@@ -1,0 +1,24 @@
+p {
+    float: left;
+    font-weight: bold;
+    width: 150px;
+    margin: 0;
+    padding-left: 16px;
+}
+#result{
+    margin-top: 10px;
+    width: 100%;
+}
+
+#result {
+    color: blue;
+}
+
+input {
+    margin-left: 12px;
+    width: 152px;
+}
+
+select.toCurrency {
+    margin-left: 40px;
+}

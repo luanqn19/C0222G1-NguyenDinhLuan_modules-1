@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+    <script type="text/javascript" src="ChuyenDoiTienTe.js"></script>
+    <link rel="stylesheet" href="ChuyenDoiTienTe.css">
+</head>
+<body>
+    <p>Amount</p>
+    <p>From Currency</p>
+    <p>To Currency</p><br>
+    <input type="text" id="amount" name="amount">
+    <select class="fromCurrency" id="fromCurrency" name="fromCurrency">
+        <option value="vnd">Viet Nam Dong</option>
+        <option value="usd">USD</option>
+    </select>
+    <select class="toCurrency" id="toCurrency" name="toCurrency">
+        <option value="vnd">Viet Nam Dong</option>
+        <option value="usd">USD</option>
+    </select>
+    <button onclick="convertCurrency()">Submit</button><br>
+<p id="result"></p>
+</body>
+</html>

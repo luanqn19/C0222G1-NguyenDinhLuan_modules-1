@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Luyện tập với cấu trúc if...else...if</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let userInput = prompt('Nhap ten: ');
+        if (userInput === "Admin"){
+            let pswInput = prompt('Nhap passwd: ');
+            if (pswInput === "TheMaster") alert('Welcome');
+            else if (pswInput === null) alert('Canceled');
+            else alert('Wrong password');
+        }else if(userInput === null) alert('canceled');
+        else alert('I don’t know you');
+    </script>
+</body>
+</html>

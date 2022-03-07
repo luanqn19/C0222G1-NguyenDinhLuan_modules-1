@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input id="firstNum" type="text" style="margin-bottom: 10px" placeholder="First Number">
+<input id="secondNum" style="margin-left: 10px; margin-bottom: 10px" type="text" placeholder="Second Number"><br>
+<button onclick="addFunction()">Addition(+)</button>
+<button onclick="subFunction()">Subtraction(-)</button>
+<button onclick="MultiFunction()">Multiplication(x)</button>
+<button onclick="divFunction()">Division(/)</button>
+<div id="display"></div>
+<script>
+    "use strict";
+    //Tại sao khai báo ngoài hàm thì giá trị là null nhưng khi khai báo trong hàm thì giá trị mới nhận được
+    function addFunction() {
+        let numFirst = document.getElementById("firstNum").value;
+        let numSecond = document.getElementById("secondNum").value;
+        let kq;
+        kq = parseInt(numFirst) + parseInt(numSecond);
+        document.getElementById('display').innerHTML = "Result: " + kq;
+    }
+
+    function subFunction() {
+        let numFirst = document.getElementById("firstNum").value;
+        let numSecond = document.getElementById("secondNum").value;
+        let kq;
+        kq = parseInt(numFirst) - parseInt(numSecond);
+        document.getElementById('display').innerHTML = "Result: " + kq;
+    }
+
+    function MultiFunction() {
+        let numFirst = document.getElementById("firstNum").value;
+        let numSecond = document.getElementById("secondNum").value;
+        let kq;
+        kq = parseInt(numFirst) * parseInt(numSecond);
+        document.getElementById('display').innerHTML = "Result: " + kq;
+    }
+
+    function divFunction() {
+        let numFirst = document.getElementById("firstNum").value;
+        let numSecond = document.getElementById("secondNum").value;
+        let kq;
+        kq = parseInt(numFirst) / parseInt(numSecond);
+        document.getElementById('display').innerHTML = "Result: " + kq;
+    }
+</script>
+</body>
+</html>
