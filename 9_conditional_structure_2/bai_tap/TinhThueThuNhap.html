@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+
+</body>
+<script>
+    "use strict";
+    // Tinh thue thu nhap ca nhan
+    let thuNhapTinhThue = parseInt(prompt('Nhap so tien thu nhap/nam(dvt:trieu dong): ', "0"));
+    alert(thuNhapTinhThue < 120 && thuNhapTinhThue > 60 ? "So tien thue = " + (thuNhapTinhThue * 0.1) :
+    (thuNhapTinhThue < 216 && thuNhapTinhThue > 120 ? "So tien thue = " + (thuNhapTinhThue * 0.2) :
+    (thuNhapTinhThue < 384 && thuNhapTinhThue > 216 ? "So tien thue = " + (thuNhapTinhThue * 0.25) :
+    (thuNhapTinhThue < 624 && thuNhapTinhThue > 384 ? "So tien thue = " + (thuNhapTinhThue * 0.3) :
+    "So tien thue = " + (thuNhapTinhThue * 0.35)))));
+</script>
+</html>

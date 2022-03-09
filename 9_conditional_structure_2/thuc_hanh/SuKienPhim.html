@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Sự kiện bàn phím</title>
+</head>
+<body onload="docReady()">
+<img id="myImg" src="nobita.png" style="position: absolute;left: 0;top:0">
+<script>
+    var myObject = document.getElementById('myImg');
+    function upPress() {
+        myObject.style.top = parseInt(myObject.style.top) - 5 + 'px';
+    }
+    function downPress() {
+        myObject.style.top = parseInt(myObject.style.top) + 5 + 'px';
+    }
+    function leftPress() {
+        myObject.style.left = parseInt(myObject.style.left) - 5 + 'px';
+    }
+    function rightPress() {
+        myObject.style.left = parseInt(myObject.style.left) + 5 + 'px';
+    }
+
+    function moveSelect($event) {
+        let x = $event.keyCode;
+        switch (x) {
+            case 37:
+                leftPress();
+                break;
+            case 38:
+                rightPress();
+                break;
+            case 39:
+                upPress();
+                break;
+            case 40:
+                downPress();
+                break;
+        }
+    }
+    // window.onload = moveSelect;
+    function docReady() {
+        window.addEventListener('keydown', moveSelect);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+
+</body>
+<script>
+    "use strict";
+    // Giai phuong trinh b2
+    let a1 = parseInt(prompt('Nhap a: ',"0"));
+    let b1 = parseInt(prompt('Nhap b: ',"0"));
+    let c1 = parseInt(prompt('Nhap c: ',"0"));
+    let delta = Math.pow(b1,2) - (4 * a1 * c1);
+    if (delta < 0)  alert('phương trình bậc 2 vô nghiệm');
+    else if (delta === 0) alert('phương trình bậc 2 có nghiệm kép x1 = x2 = ' + (-b1/2*a));
+    else alert('phương trình bậc 2 có nghiệm x1 = ' + ((-b1 - Math.sqrt(delta))/2*a1)
+                + 'x2 = ' + ((-b1 + Math.sqrt(delta))/2*a1));
+</script>
+</html>

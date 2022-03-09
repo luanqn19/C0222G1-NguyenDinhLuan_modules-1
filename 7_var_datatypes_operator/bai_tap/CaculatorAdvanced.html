@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator Advanced</title>
+    <script type="text/javascript" src="CalculatorAdvanced.js"></script>
+    <link rel="stylesheet" href="CaculatorAdvaced.css">
+</head>
+<body>
+<div id="display">
+    <input id="smallDisplay" type="text" readonly="readonly" onfocus="this.blur()">
+    <input id="bigDisplay" type="text" readonly="readonly" onfocus="this.blur()">
+</div>
+
+<table id="key">
+    <tr>
+        <td id="radButton">Rad</td>
+        <td id="degButton">Deg</td>
+        <td id="unk">x!</td>
+        <td id="parenthesesLeft">(</td>
+        <td id="parenthesesRight">)</td>
+        <td id="percent">%</td>
+        <td id="reset" onclick="bigDisplay.value = '' ">AC</td>
+    </tr>
+    <tr>
+        <td id="lnv">lnv</td>
+        <td id="sin">sin</td>
+        <td id="ln">ln</td>
+        <td class="numberKey" onclick="bigDisplay.value += 7" id="7">7</td>
+        <td class="numberKey" onclick="bigDisplay.value += 8" id="8">8</td>
+        <td class="numberKey" onclick="bigDisplay.value += 9" id="9">9</td>
+        <td id="division" onclick="bigDisplay.value += '/'">/</td>
+    </tr>
+    <tr>
+        <td id="pi">pi</td>
+        <td id="cos">cos</td>
+        <td id="log">log</td>
+        <td id="4" onclick="bigDisplay.value += 4" class="numberKey">4</td>
+        <td id="5" onclick="bigDisplay.value += 5" class="numberKey">5</td>
+        <td id="6" onclick="bigDisplay.value += 6" class="numberKey">6</td>
+        <td id="multi" onclick="bigDisplay.value += '*'">x</td>
+    </tr>
+    <tr>
+        <td id="e">e</td>
+        <td id="tan">tan</td>
+        <td id="sqrt">sqrt</td>
+        <td id="1" onclick="bigDisplay.value += 1" class="numberKey">1</td>
+        <td id="2" onclick="bigDisplay.value += 2" class="numberKey">2</td>
+        <td id="3" onclick="bigDisplay.value += 3" class="numberKey">3</td>
+        <td id="sub" onclick="bigDisplay.value += '-'" >-</td>
+    </tr>
+    <tr>
+        <td id="ans">Ans</td>
+        <td id="exp">EXP</td>
+        <td id="pow">x<sup>y</sup></td>
+        <td id="0" onclick="bigDisplay.value += 0" class="numberKey">0</td>
+        <td id="dot" class="numberKey">.</td>
+        <td id="result" style="background-color: dodgerblue; color: white" onclick="
+        bigDisplay.value = eval(bigDisplay.value)">=</td>
+        <td id="add" onclick="bigDisplay.value += '+'">+</td>
+    </tr>
+</table>
+</body>
+</html>

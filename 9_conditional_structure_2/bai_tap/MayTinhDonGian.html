@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Máy tính đơn giản</title>
+    <style>
+        table{
+            width: 50%;
+        }
+        tr, td{
+            font-size: 20px;
+            text-align: center;
+            height: 70px;
+            width: 10px;
+            border: 1px solid;
+        }
+        td{
+            font-family: Calibri;
+            font-weight: bold;
+        }
+        td:hover{
+            background-color: dodgerblue;
+        }
+        input{
+            padding-right: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: right;
+            border: none;
+            width: 464px;
+            height: 64px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="4"><input id="display" type="text" onfocus="this.blur()" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td onclick="display.value += 1">1</td>
+                <td onclick="display.value += 2">2</td>
+                <td onclick="display.value += 3">3</td>
+                <td onclick="display.value += '+'">+</td>
+            </tr>
+            <tr>
+                <td onclick="display.value += 4">4</td>
+                <td onclick="display.value += 5">5</td>
+                <td onclick="display.value += 6">6</td>
+                <td onclick="display.value += '-'">-</td>
+            </tr>
+            <tr>
+                <td onclick="display.value += 7">7</td>
+                <td onclick="display.value += 8">8</td>
+                <td onclick="display.value += 9">9</td>
+                <td onclick="display.value += '*'">x</td>
+            </tr>
+            <tr>
+                <td onclick="display.value = ''">C</td>
+                <td onclick="display.value += 0">0</td>
+                <td id="result">=</td>
+                <td onclick="display.value += '/'">/</td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    "use strict"
+    //Move Script tag after Body tag if "Error type...null" when call addEventListener
+    let btnResult = document.getElementById('result');
+    btnResult.addEventListener('click', calculate);
+
+    function calculate() {
+        let textString = document.getElementById('display');
+        if (textString.value === '')
+            textString.value = 0;
+        else
+            textString.value = eval(textString.value);
+    }
+</script>
+</html>

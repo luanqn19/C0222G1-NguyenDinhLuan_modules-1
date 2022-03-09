@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+
+</body>
+<script>
+    "use strict";
+    //Xep hang hoc luc
+    let kiemTraMieng = parseInt(prompt('Nhap diem kiem tra mieng: ', "0"));
+    let kiemTraGiuaKy = parseInt(prompt('Nhap diem kiem tra giua ky: ', "0"));
+    let kiemTraCuoiKy = parseInt(prompt('Nhap diem kiem tra cuoi ky: ', "0"));
+    let diemTrungBinh = (kiemTraMieng + kiemTraGiuaKy * 2 + kiemTraCuoiKy * 7) / 10;
+
+    alert(diemTrungBinh >= 9 && diemTrungBinh < 10 ? "Hoc sinh xuat sac" :
+        (diemTrungBinh >= 8 && diemTrungBinh < 9 ? "Hoc sinh gioi" :
+        (diemTrungBinh >= 6 && diemTrungBinh < 8 ? "Hoc sinh kha" :
+        (diemTrungBinh >= 3 && diemTrungBinh < 6 ? "Hoc sinh trung binh" : "Hoc sinh yeu"))));
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+
+</body>
+<script>
+    "use strict";
+    // Tinh gia dien
+    let pTieuThu = parseInt(prompt('Nhap so dien trong 1 thang(kWh): ', "0"));
+    alert(pTieuThu <= 50 && pTieuThu > 0 ? "So tien cuoc = " + (pTieuThu * 1.678) :
+    (pTieuThu <= 100 && pTieuThu >= 51 ? "So tien cuoc = " + (pTieuThu * 1.734) :
+    (pTieuThu <= 200 && pTieuThu >= 101 ? "So tien cuoc = " + (pTieuThu * 2.014) :
+    (pTieuThu <= 300 && pTieuThu >= 201 ? "So tien cuoc = " + (pTieuThu * 2.536) :
+    "So tien cuoc = " + (pTieuThu * 2.927)))));
+</script>
+</html>

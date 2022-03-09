@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Tam Giác</title>
+</head>
+<body>
+
+</body>
+<script>
+    "use strict";
+    let a = prompt('Input a: ');
+    console.log(a);
+    let b = prompt('Input b: ');
+    console.log(b);
+    let c = prompt('Input c: ');
+    console.log(c);
+    let d = a>0 && b>0 && c>0;
+    console.log(d);
+    if (d){
+        if (a+b>c || b+c>a || a+c>b) alert('A triangle');
+    }
+    else alert('Not a triangle');
+</script>
+</html>

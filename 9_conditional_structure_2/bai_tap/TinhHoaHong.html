@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+
+</body>
+<script>
+    "use strict";
+    //Tinh hoa hong tu doanh thu ban hang
+    let doanhThu = parseInt(prompt('Nhap doanh thu ban hang: ', "0"));
+    alert( doanhThu < 100000000 ? "So tien hoa hong = " + (0.05 * doanhThu) :
+    (doanhThu < 200000000 && doanhThu >= 100000000 ? "So tien hoa hong = " + (0.1 * doanhThu) :
+    (doanhThu < 300000000 && doanhThu >= 200000000 ? "So tien hoa hong = " + (0.15 * doanhThu) :
+    (doanhThu < 400000000 && doanhThu >= 300000000 ? "So tien hoa hong = " + (0.2 * doanhThu) :
+    "So tien hoa hong = " + (0.25 * doanhThu)))));
+</script>
+</html>

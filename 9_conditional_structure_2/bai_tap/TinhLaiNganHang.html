@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title style="text-transform: uppercase">tính lãi ngân hàng</title>
+</head>
+<body>
+<p id="displayText"></p>
+</body>
+<script>
+    let loan = parseInt(prompt('Nhap so tien vay: ','0'));
+    let year = parseInt(prompt('Nhap so nam vay: ','0'));
+    let rate = parseInt(prompt('Nhap lai suat/nam: ','0'));
+    let gepLai = parseInt(prompt('Nhap so lan ghep lai suat/thang: ','0'));
+    alert('So tien lai phai tra: ' + (loan * Math.pow((1 + (rate/(100 * gepLai))), year * gepLai)).toFixed(0))
+</script>
+</html>

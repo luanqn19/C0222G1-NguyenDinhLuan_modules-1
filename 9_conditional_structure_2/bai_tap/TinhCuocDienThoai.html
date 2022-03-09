@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+
+</body>
+<script>
+    "use strict";
+    //Tinh cuoc dien thoai
+    let thoiGianGoi = parseInt(prompt('Nhap thoi gian goi trong 1 thang: ', "0"));
+    alert(thoiGianGoi < 100 ? "So tien cuoc = " + (60 * thoiGianGoi * 1000) :
+    (thoiGianGoi < 200 && thoiGianGoi >= 100 ? "So tien cuoc = " + (60 * thoiGianGoi * 800) :
+    (thoiGianGoi < 300 && thoiGianGoi >= 200 ? "So tien cuoc = " + (60 * thoiGianGoi * 750) :
+    (thoiGianGoi < 400 && thoiGianGoi >= 300 ? "So tien cuoc = " + (60 * thoiGianGoi * 700) :
+    "So tien cuoc = " + (60 * thoiGianGoi * 600)))));
+</script>
+</html>

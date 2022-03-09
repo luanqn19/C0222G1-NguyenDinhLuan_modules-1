@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Chuyen doi nhiet do
+    alert("Do F = " + (parseInt(prompt('Nhap nhiet do: ',"0")) * 9/5 + 32));
+
+    // Chuyen doi chieu dai
+    alert("Ft = " + (parseInt(prompt('Nhap chieu dai(m): ',"0")) * 3.2808));
+
+    // Tinh dien tich hinh vuong
+    alert("Dien tich hinh vuong = " + (Math.pow(parseInt(prompt('Nhap chieu dai canh(m): ',"0")), 2)));
+
+    // Dien tich tam giac vuong
+    alert("Dien tich tam giac vuong = " + (1/2 * parseInt(prompt('Nhap chieu dai canh a: ',"0"))
+    * parseInt(prompt('Nhap chieu dai canh b: ',"0"))));
+
+    // Giai phuong trinh b1
+    let a = parseInt(prompt('Nhap a: ',"0"));
+    let b = parseInt(prompt('Nhap b: ',"0"));
+    if (a === 0 && b === 0) alert('phương trình có vô số nghiệm.');
+    else if (a === 0 ) alert('phương trình vô nghiệm.');
+    else alert('phương trình có nghiệm duy nhất = ' + (-b/a));
+
+
+    // Giai phuong trinh b2
+    let a1 = parseInt(prompt('Nhap a: ',"0"));
+    let b1 = parseInt(prompt('Nhap b: ',"0"));
+    let c1 = parseInt(prompt('Nhap c: ',"0"));
+    let delta = Math.pow(b1,2) - (4 * a1 * c1);
+    if (delta < 0)  alert('phương trình bậc 2 vô nghiệm');
+    else if (delta === 0) alert('phương trình bậc 2 có nghiệm kép x1 = x2 = ' + (-b1/2*a));
+    else alert('phương trình bậc 2 có nghiệm x1 = ' + ((-b1 - Math.sqrt(delta))/2*a1)
+                + 'x2 = ' + ((-b1 + Math.sqrt(delta))/2*a1));
+
+    // Kiem tra so tuoi
+    alert(parseInt(prompt('Nhap tuoi: ',"0")) > 0 && parseInt(prompt('Nhap tuoi: ',"0")) < 120 ?
+            "Day la nguoi" : "Day khong phai la nguoi");
+
+    // Tinh gia dien
+    let pTieuThu = parseInt(prompt('Nhap so dien trong 1 thang(kWh): ', "0"));
+    alert(pTieuThu <= 50 && pTieuThu > 0 ? "So tien cuoc = " + (pTieuThu * 1.678) :
+    (pTieuThu <= 100 && pTieuThu >= 51 ? "So tien cuoc = " + (pTieuThu * 1.734) :
+    (pTieuThu <= 200 && pTieuThu >= 101 ? "So tien cuoc = " + (pTieuThu * 2.014) :
+    (pTieuThu <= 300 && pTieuThu >= 201 ? "So tien cuoc = " + (pTieuThu * 2.536) :
+    "So tien cuoc = " + (pTieuThu * 2.927)))));
+
+
+    // Tinh thue thu nhap ca nhan
+    let thuNhapTinhThue = parseInt(prompt('Nhap so tien thu nhap/nam(dvt:trieu dong): ', "0"));
+    alert(thuNhapTinhThue < 120 && thuNhapTinhThue > 60 ? "So tien thue = " + (thuNhapTinhThue * 0.1) :
+    (thuNhapTinhThue < 216 && thuNhapTinhThue > 120 ? "So tien thue = " + (thuNhapTinhThue * 0.2) :
+    (thuNhapTinhThue < 384 && thuNhapTinhThue > 216 ? "So tien thue = " + (thuNhapTinhThue * 0.25) :
+    (thuNhapTinhThue < 624 && thuNhapTinhThue > 384 ? "So tien thue = " + (thuNhapTinhThue * 0.3) :
+    "So tien thue = " + (thuNhapTinhThue * 0.35)))));
+
+
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+
+</body>
+<script>
+    //a chia het cho b
+    alert(parseInt(prompt('Nhap a: ', "0")) % parseInt(prompt('Nhap b: ', "0")) === 0 ?
+        "a chia het cho b" : "a khong chia het cho b");
+
+    //Dieu kien vao lop 10
+    alert(parseInt(prompt('Nhap tuoi: ', "0")) >= 15 ? "Du tuoi vao lop 10" : "Khong du tuoi vao lop 10");
+
+    //lon hon hay nho hon 0
+    alert(parseInt(prompt('Nhap a: ')) > 0 ? "so vua nhap lon hon 0" : "so vua nhap nho hon 0");
+
+    //tim so lon nha trong 3 so
+    let max = Math.max(parseInt(prompt('Nhap a: ', "0")), parseInt(prompt('Nhap b: ', "0")),
+        parseInt(prompt('Nhap a: ', "0")));
+    alert("So lon nhat trong ba so la: " + max);
+
+    //Xep hang hoc luc
+    let kiemTraMieng = parseInt(prompt('Nhap diem kiem tra mieng: ', "0"));
+    let kiemTraGiuaKy = parseInt(prompt('Nhap diem kiem tra giua ky: ', "0"));
+    let kiemTraCuoiKy = parseInt(prompt('Nhap diem kiem tra cuoi ky: ', "0"));
+    let diemTrungBinh = (kiemTraMieng + kiemTraGiuaKy * 2 + kiemTraCuoiKy * 7) / 10;
+
+    alert(diemTrungBinh >= 9 && diemTrungBinh < 10 ? "Hoc sinh xuat sac" :
+        (diemTrungBinh >= 8 && diemTrungBinh < 9 ? "Hoc sinh gioi" :
+        (diemTrungBinh >= 6 && diemTrungBinh < 8 ? "Hoc sinh kha" :
+        (diemTrungBinh >= 3 && diemTrungBinh < 6 ? "Hoc sinh trung binh" : "Hoc sinh yeu"))));
+
+    //Tinh hoa hong tu doanh thu ban hang
+    let doanhThu = parseInt(prompt('Nhap doanh thu ban hang: ', "0"));
+    alert( doanhThu < 100000000 ? "So tien hoa hong = " + (0.05 * doanhThu) :
+    (doanhThu < 200000000 && doanhThu >= 100000000 ? "So tien hoa hong = " + (0.1 * doanhThu) :
+    (doanhThu < 300000000 && doanhThu >= 200000000 ? "So tien hoa hong = " + (0.15 * doanhThu) :
+    (doanhThu < 400000000 && doanhThu >= 300000000 ? "So tien hoa hong = " + (0.2 * doanhThu) :
+    "So tien hoa hong = " + (0.25 * doanhThu)))));
+
+    //Tinh cuoc dien thoai
+    let thoiGianGoi = parseInt(prompt('Nhap thoi gian goi trong 1 thang: ', "0"));
+    alert(thoiGianGoi < 100 ? "So tien cuoc = " + (60 * thoiGianGoi * 1000) :
+    (thoiGianGoi < 200 && thoiGianGoi >= 100 ? "So tien cuoc = " + (60 * thoiGianGoi * 800) :
+    (thoiGianGoi < 300 && thoiGianGoi >= 200 ? "So tien cuoc = " + (60 * thoiGianGoi * 750) :
+    (thoiGianGoi < 400 && thoiGianGoi >= 300 ? "So tien cuoc = " + (60 * thoiGianGoi * 700) :
+    "So tien cuoc = " + (60 * thoiGianGoi * 600)))));
+</script>
+</html>

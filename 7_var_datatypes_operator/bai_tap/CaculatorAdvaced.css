@@ -1,0 +1,58 @@
+#display{
+    height: 100px;
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+#smallDisplay{
+    border: none;
+    width: 95%;
+    height: 30px;
+    font-size: 25px;
+    text-align: right;
+    margin-top: 10px;
+}
+#bigDisplay{
+    border-radius: 15px;
+    width: 95%;
+    border: none;
+    display: block;
+    height: 55px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: right;
+}
+#key{
+    margin-top: 5px;
+    width: 70%;
+    border-spacing: 0.5em;
+}
+#key tr{
+    font-family: Calibri;
+    font-size: 20px;
+    background-color: lightgray;
+    padding: 8px;
+    border: 1px solid lightgray;
+    text-align: center;
+}
+#key td{
+    font-family: Calibri;
+    font-size: 20px;
+    background-color: lightgray;
+    padding: 8px;
+    border: 1px solid lightgray;
+    text-align: center;
+    width: 50px;
+}
+#key td:hover{
+    cursor: context-menu;
+    background-color: gray;
+}
+.numberKey:hover{
+    cursor: context-menu;
+    background-color: gray !important;
+}
+
+.numberKey{
+    background-color: white !important;
+}
