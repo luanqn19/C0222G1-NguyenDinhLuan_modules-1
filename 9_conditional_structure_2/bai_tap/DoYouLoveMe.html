@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me</title>
+    <style>
+        button{
+            width: 40px;
+            margin-left: 10px;
+        }
+        #btnNo{
+            position: absolute;
+        }
+        body{
+            height: 600px;
+            width: 97%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 40px; text-align: center">Do You Love Me?</h1>
+    <button style="margin-left: 45%" type="button" onclick="alert('Me too!')">Yes</button>
+    <button type="button" id="btnNo" onmouseover="onAction(this)">No</button>
+    <script>
+        "use strict";
+        // let btnMove = document.getElementById('btnNo');
+        function onAction(x) {
+            let bodyWidth = document.body.clientWidth;
+            let bodyHeight = document.body.clientHeight;
+            let randPosX = Math.floor(Math.random() * bodyHeight);
+            let randPosY = Math.floor(Math.random() * bodyWidth);
+            x.style.top = randPosX + "px";
+            x.style.left = randPosY + "px";
+        }
+    </script>
+</body>
+</html>

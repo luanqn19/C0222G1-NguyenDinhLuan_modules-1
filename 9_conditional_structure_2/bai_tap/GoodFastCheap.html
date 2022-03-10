@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng good-fast-cheap</title>
+</head>
+<body>
+<form>
+    <label for="good"><input type="checkbox" id="good" onchange="changeVal(this)" value=false>Good</label><br>
+    <label for="cheap"><input type="checkbox" id="cheap" onchange="changeVal(this)" value=false>Cheap</label><br>
+    <label for="fast"><input type="checkbox" id="fast" onchange="changeVal(this)" value=false>Fast</label>
+</form>
+</body>
+<script>
+    "use strict";
+    let btnGood = document.getElementById('good');
+    let btnCheap = document.getElementById('cheap');
+    let btnFast = document.getElementById('fast');
+
+    function changeVal(obj) {
+        let isGood = btnGood.checked;
+        let isCheap = btnCheap.checked;
+        let isFast = btnFast.checked;
+        switch (obj) {
+            case btnGood:
+                if (isGood && isCheap && isFast) {
+                    btnCheap.checked = false;
+                }
+                break;
+            case btnCheap:
+                if (isCheap && isFast && isGood) {
+                    btnFast.checked = false;
+                }
+                break;
+            case btnFast:
+                if (isFast && isCheap && isGood) {
+                    btnGood.checked = false;
+                }
+                break;
+        }
+    }
+</script>
+</html>

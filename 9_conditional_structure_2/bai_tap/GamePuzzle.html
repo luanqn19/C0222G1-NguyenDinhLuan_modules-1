@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Game puzzle</title>
+    <style>
+        table{
+            border-spacing: 0.5em;
+            width: 40%;
+            height: 600px;
+        }
+        td{
+            box-shadow: black 2px 3px 3px;
+            padding: 0;
+        }
+        .allSet{
+            box-shadow: 4px 4px 9px red;
+            padding: 0;
+        }
+        img{
+            height: 113px;
+            width: 565px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td id="img_1"><img id="img1" onclick="changeImg(this)" src="monkey/monkey_part1x1.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td id="img_2"><img id="img2" onclick="changeImg(this)" src="panda/panda_swap_part2x1.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td id="img_3"><img id="img3" onclick="changeImg(this)" src="cat/funny-cat1_part3x1.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td id="img_4"><img id="img4" onclick="changeImg(this)" src="panda/panda_swap_part4x1.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td id="img_5"><img id="img5" onclick="changeImg(this)" src="monkey/monkey_part5x1.jpg" alt=""></td>
+    </tr>
+</table>
+</body>
+<script>
+    "use strict";
+    let linkImg1 = ["cat/funny-cat1_part1x1.jpg", "monkey/monkey_part1x1.jpg", "panda/panda_swap_part1x1.jpg"];
+    let linkImg2 = ["cat/funny-cat1_part2x1.jpg", "monkey/monkey_part2x1.jpg", "panda/panda_swap_part2x1.jpg"];
+    let linkImg3 = ["cat/funny-cat1_part3x1.jpg", "monkey/monkey_part3x1.jpg", "panda/panda_swap_part3x1.jpg"];
+    let linkImg4 = ["cat/funny-cat1_part4x1.jpg", "monkey/monkey_part4x1.jpg", "panda/panda_swap_part4x1.jpg"];
+    let linkImg5 = ["cat/funny-cat1_part5x1.jpg", "monkey/monkey_part5x1.jpg", "panda/panda_swap_part5x1.jpg"];
+    let imgPos = [1,2,0,2,1];
+
+    let img_1 = document.getElementById('img1');
+    let img_2 = document.getElementById('img2');
+    let img_3 = document.getElementById('img3');
+    let img_4 = document.getElementById('img4');
+    let img_5 = document.getElementById('img5');
+
+    function randomIndex() {
+        return Math.floor(Math.random()*3);
+    }
+
+    function checkSet() {
+        let value = imgPos[0];
+        let flag = true;
+        for (let i = 1 ; i < 5 ; i++){
+            if(imgPos[i] !== value){
+                flag = false;
+            }
+        }
+        for (let i = 0 ; i < 5 ; i++){
+            console.log(imgPos[i]);
+        }
+        if (flag === true){
+            document.getElementById('img_1').setAttribute('class', 'allSet');
+            document.getElementById('img_2').setAttribute('class', 'allSet');
+            document.getElementById('img_3').setAttribute('class', 'allSet');
+            document.getElementById('img_4').setAttribute('class', 'allSet');
+            document.getElementById('img_5').setAttribute('class', 'allSet');
+        }
+    }
+
+    function changeImg(obj) {
+        let index = null;
+        switch (obj) {
+            case img_1:
+                index = randomIndex();
+                img_1.src = linkImg1[index];
+                imgPos[0] = index;
+                break;
+            case img_2:
+                index = randomIndex();
+                img_2.src = linkImg2[index];
+                imgPos[1] = index;
+                break;
+            case img_3:
+                index = randomIndex();
+                img_3.src = linkImg3[index];
+                imgPos[2] = index;
+                break;
+            case img_4:
+                index = randomIndex();
+                img_4.src = linkImg4[index];
+                imgPos[3] = index;
+                break;
+            case img_5:
+                index = randomIndex();
+                img_5.src = linkImg5[index];
+                imgPos[4] = index;
+                break;
+        }
+        checkSet()
+    }
+</script>
+</html>
