@@ -56,7 +56,8 @@
     //Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau
 
     /* Hinh 1
-    for (let i = 0 ; i < rowTriagle ; i++){
+    let rowTrigle = parseInt(prompt('Input number of rows: '));
+    for (let i = 0 ; i < rowTrigle ; i++){
         for (let j = i ; j > 0 ; j--){
             document.write('*');
         }
@@ -64,7 +65,8 @@
     } */
 
     /* Hinh 2
-    for (let i = rowTriagle ; i > 0 ; i--){
+    let rowTrigle = parseInt(prompt('Input number of rows: '));
+    for (let i = rowTrigle ; i > 0 ; i--){
         for (let j = i ; j > 0 ; j--){
             document.write('*');
         }
@@ -73,9 +75,10 @@
      */
 
     /* Hinh 3
-    for (let i = 0 ; i < rowTriagle ; i++){
+    let rowTrigle = parseInt(prompt('Input number of rows: '));
+    for (let i = 0 ; i < rowTrigle ; i++){
         //Space
-        for (let j = rowTriagle - i - 1 ; j > 0 ; j--){
+        for (let j = rowTrigle - i - 1 ; j > 0 ; j--){
             document.write(' ');
         }
         //Star
