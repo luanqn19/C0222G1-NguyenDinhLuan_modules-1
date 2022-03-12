@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+<script>
+    //Bài 2: Vẽ tam giác vuông cân rỗng có chiều cao h
+    let rowTrigle = parseInt(prompt('Input number of rows: '));
+    for (let i = 0 ; i < rowTrigle ; i++) {
+        for (let j = i; j >= 0; j--) {
+            if(j === 0 || j === i  || i === rowTrigle - 1){
+                document.write('*');
+            }else{
+                document.write('&nbsp;&nbsp;');
+            }
+        }
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>

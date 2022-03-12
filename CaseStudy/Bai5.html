@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+</head>
+<body>
+<script>
+    //Bài 1: Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng
+    // (số tiền lương thực sự mà nhân viên đó nhận được). Với các thông số giả sử như sau
+    // (không theo luật lương, chỉ là con số giả sử để dễ tính toán):
+
+    let x = parseInt(prompt("Nhap so luong: "),"0");
+    let y = null;
+    if(x > 15000000)	y = x * 0.2;
+    else if(x > 7000000 && x < 15000000)	y = x * 0.1;
+    else y = x * 0.05;
+    alert("Thu nhap sau thue: " + (x - y));
+</script>
+</body>
+</html>

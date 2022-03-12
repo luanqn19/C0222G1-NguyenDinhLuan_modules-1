@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 7</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Bài 1: Cho mảng a chỉ chứa các số nguyên
+    let x = [1, 5, 7, 8, 15];
+    let y = [0, 0, 0, 0, 0];
+    let stringText = "";
+
+    // export data to string
+    function saveArrayToString(arr) {
+        for (let i = 0; i < x.length; i++) {
+            stringText += arr[i] + " ";
+        }
+        stringText += '<br>';
+    }
+
+    // Import data for array y
+    function importDataToArray() {
+        for (let i = 0; i < x.length; i++) {
+            for (let j = 0; j <= i; j++) {
+                y[i] += x[j];
+            }
+        }
+    }
+
+    stringText += "Array a : ";
+    saveArrayToString(x);
+
+    importDataToArray();
+
+    stringText += "Array b : ";
+    saveArrayToString(y);
+
+    document.write(stringText);
+
+</script>
+</body>
+</html>

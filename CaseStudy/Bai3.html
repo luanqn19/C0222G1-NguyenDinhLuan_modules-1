@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body>
+<script>
+    //Bài 3: Vẽ tam giác cân đặc có chiều cao h.
+    let rowTrigle = parseInt(prompt('Input number of rows: '));
+    for (let a = 0; a < rowTrigle; a++) {
+        for (let b = 0; b < (2 * rowTrigle + 1) - (2 * a + 3); b++) document.write('&nbsp;');
+        for (let c = 2 * a + 1; c > 0; c--) document.write('*');
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>

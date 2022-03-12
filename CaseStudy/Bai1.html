@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+<script>
+    //Bài 1: Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây.
+    let rowRectangle = parseInt(prompt('Input number of rows: '));
+    for (let i = 0; i < rowRectangle; i++) {
+        // spacing
+        for (let j = 0; j < 2 * rowRectangle + 1; j++) {
+            if (i === 0 || i === rowRectangle - 1 || j === 0 || j === 2 * rowRectangle){
+                document.write('* ');
+            }else{
+                document.write('&nbsp;&nbsp;&nbsp;');
+            }
+        }
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>
