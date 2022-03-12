@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+    // Kiem tra so nguyen to trong day so tu so nhap truoc
+    let a = parseInt(prompt('Nhap mot so: '));
+    console.log('Cac so nguyen to: ');
+    function check(val) {
+        let flag = true;
+        for(let i = 2 ; i < val ; i++){
+            if(val % i === 0) flag = false;
+        }
+        flag === true ? console.log(val) : "";
+    }
+
+    for (let i = 2 ; i < a ; i++){
+        if (i === 2) console.log(i);
+        else check(i);
+    }
+
+</script>
+</body>
+</html>

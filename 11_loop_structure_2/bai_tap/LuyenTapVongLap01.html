@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập vòng lặp 01</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.
+
+    /*
+    for (let i = 1 ; i <= 100 ; i++){
+        console.log(i);
+        if(i === 99) alert('Done');
+    }
+    */
+
+    //Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ
+    //nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+
+    /*
+    do {
+        let temp = parseInt(prompt('Nhap nhiet do: ',"0"));
+        if (temp > 100){
+            alert('Giam nhiet do');
+            temp = parseInt(prompt('Nhap nhiet do: ',"0"));
+        }else if (temp < 20){
+            alert('Tang nhiet do');
+            temp = parseInt(prompt('Nhap nhiet do: ',"0"));
+        }
+    }while (true);
+    */
+
+    //Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+    /* function fibonacciNumber(n, x){
+        let a = 0, b = 1, c = 1;
+        for (let i = 2 ; i < n ; i++){
+            if (i === 0 || i === 1) console.log(i);
+            else {
+                a = b;
+                b = c;
+                c = a + b;
+            }
+            if (c % 5 === 0) {
+                console.log(c);
+                break;
+            }
+        }
+    }
+
+    let a = parseInt(prompt('Nhap pham vi can tim: '));
+    let b = parseInt(prompt('Nhap dieu kien (chia het): '));
+
+    fibonacciNumber(a, b);
+    */
+
+    //Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+    /*
+    function fibonacciFun(n) {
+        let a = 0;
+        let b = 1;
+        let c = 1;
+        let sum = 0;
+        let count = 0;
+
+        for (let i = 0 ; i < n ; i++){
+            if(i === 0){
+                count++;
+                sum+=i;
+            }else if (i === 1){
+                count += 2;
+                sum += 2;
+            }else{
+                a = b;
+                b = c;
+                c = a + b;
+                sum+=c;
+                count++;
+                if (count === 20) break;
+            }
+        }
+        console.log(sum);
+    }
+
+    let num = parseInt(prompt('Nhap pham vi can tim: '));
+    fibonacciFun(num);
+    */
+
+    //Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
+    /*
+    function sumFun(n) {
+        let count = 0;
+        let sum = 0;
+        for (let i = 0 ; i < n ; i++){
+            if(i % 7 === 0){
+                count++;
+                sum += i;
+                console.log(i);
+            }
+            if (count === 30) break;
+        }
+        console.log(sum);
+    }
+
+    let num = parseInt(prompt('Nhap pham vi can tim: '));
+    sumFun(num);
+    */
+
+    //Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz",
+    // 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+    /*
+    for (let i = 1 ; i <= 100 ; i++){
+        switch (true) {
+            case (i % 3 === 0 && i % 5 !== 0):
+                console.log('Fizz');
+                break;
+            case (i % 3 !== 0 && i % 5 === 0):
+                console.log('Buzz');
+                break;
+            case (i % 3 === 0 && i % 5 === 0):
+                console.log('FizzBuzz');
+                break;
+            default:
+                console.log(i);
+                break;
+        }
+    }
+    */
+
+    //Bài 8: Game đoán số
+    /*
+    let inputNum = null;
+    let num = Math.floor((Math.random() * 100) + 1);
+    console.log(num);
+    let count = 0;
+    while (count !== 3){
+        inputNum = parseInt(prompt('Nhap 1 so ( > 1 va < 100): ' , '0'));
+        if (inputNum > num){
+            alert('So nhap lon hon!');
+            count++;
+        }else if(inputNum < num){
+            alert('So nhap nho hon!');
+            count++;
+        }else {
+            alert('Chuc mung ban da chon dung!');
+            break;
+        }
+    }
+     */
+
+</script>
+</body>
+</html>
