@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Bài 3- Viết chương trình khởi tạo mảng số nguyên.
+    //Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.
+    let arrayNum = new Array(10);
+    let average = 0;
+    for(let i = 0 ; i < 10 ; i++){
+        arrayNum[i] = Math.floor((Math.random() * 100) + 1);
+    }
+    console.log('Mảng ban đầu: ');
+    for (let i = 0 ; i < 10 ; i++){
+        console.log(arrayNum[i]);
+    }
+    console.log('Gía trị lớn nhất trong mảng: ');
+    console.log(Math.max.apply(null,arrayNum));
+    for(let i = 0 ; i < 10 ; i++){
+        average += arrayNum[i];
+    }
+    console.log('Gía trị trung bình trong mảng: ' + average/10);
+</script>
+</body>
+</html>

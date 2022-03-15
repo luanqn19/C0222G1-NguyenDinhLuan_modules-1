@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+    // Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+
+    let arrayNum = new Array(10);
+    for(let i = 0 ; i < 10 ; i++){
+        arrayNum[i] = Math.floor((Math.random() * 10) + 1);
+    }
+    console.log('Mảng ban đầu: ');
+    for (let i = 0 ; i < 10 ; i++){
+        console.log(arrayNum[i]);
+    }
+    console.log('Mảng sau khi sắp xếp: ');
+    for (let i = 0 ; i < arrayNum.length - 1 ; i++){
+        for (let j = i + 1 ; j < arrayNum.length ; j++){
+            if (arrayNum[i] < [arrayNum[j]]){
+                let temp = arrayNum[i];
+                arrayNum[i] = arrayNum[j];
+                arrayNum[j] = temp;
+            }
+        }
+    }
+    for (let i = 0 ; i < 10 ; i++){
+        console.log(arrayNum[i]);
+    }
+</script>
+</body>
+</html>

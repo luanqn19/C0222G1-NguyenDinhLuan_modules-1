@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.
+    // Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
+    // Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+
+    let arrA = new Array(10);
+    let arrB = new Array(10);
+    let arrC = new Array(20);
+    for(let i = 0 ; i < 10 ; i++){
+        arrA[i] = Math.floor((Math.random() * 10) + 1);
+    }
+    for(let i = 0 ; i < 10 ; i++){
+        arrB[i] = Math.floor((Math.random() * 10) + 1);
+    }
+    console.log('Mảng A: ');
+    for (let i = 0 ; i < 10 ; i++){
+        console.log(arrA[i]);
+    }
+    console.log('Mảng B: ');
+    for (let i = 0 ; i < 10 ; i++){
+        console.log(arrB[i]);
+    }
+    console.log('Mảng C: ');
+    arrC = arrB.concat(arrA);
+    for (let i = 0 ; i < 20 ; i++){
+        console.log(arrC[i]);
+    }
+</script>
+</body>
+</html>

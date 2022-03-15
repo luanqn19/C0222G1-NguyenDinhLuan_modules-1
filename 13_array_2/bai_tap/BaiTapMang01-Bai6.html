@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    // Chương trình tìm xem V có nằm trong mảng số nguyên không?
+    // Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+
+    let arrayNum = new Array(10);
+    let x = parseInt(prompt('Input number: '));
+    let flag = false;
+    for(let i = 0 ; i < 10 ; i++){
+        arrayNum[i] = Math.floor((Math.random() * 10) + 1);
+    }
+    console.log('Mảng ban đầu: ');
+    for (let i = 0 ; i < 10 ; i++){
+        console.log(arrayNum[i]);
+    }
+    for (let i = 0 ; i < 10 ; i++){
+        if(arrayNum[i] === x) flag = true;
+    }
+    flag === true ? console.log(x + ' is in the array') : console.log(x + ' isn\'t in the array');
+</script>
+</body>
+</html>

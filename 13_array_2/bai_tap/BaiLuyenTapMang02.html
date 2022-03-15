@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập mảng 02</title>
+</head>
+<body>
+<script>
+    //Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng.
+    /*let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    for (let i = 0 ; i < 5 ; i++){
+        console.log('row ' + i);
+        for(let j = 0 ; j < 4 ; j++){
+            console.log(a[i][j]);
+        }
+    } */
+
+    //Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược
+    /* let arr = [ 'c', 's', 'c', '2', '6', '1' ];
+    arr.reverse();
+    console.log(arr.join(''));
+     */
+
+    //Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    // Chương trình này đếm số ký tự số trong mảng.
+    /* let arr = [ 'c', 's', 'c', '2', '6', '1' ];
+    let count = 0;
+    for (let i = 0 ; i < arr.length ; i++){
+        if(arr[i] >= 0 || arr[i] <= 9) count++;
+    }
+    console.log('Số ký tự số trong mảng: ' + count);
+     */
+
+    //Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+    /* let arr = "The Quick Brown Fox";
+    let count = 0;
+    for(let i = 0 ; i < arr.length ; i++){
+        if(arr[i] !== ' ') count++;
+    }
+    console.log('Số từ trong chuỗi: ' + count);
+     */
+
+    //Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+    /*
+    let text1 = "The Quick Brown Fox";
+    let text2 = "The Quick Brown Ford";
+    let flag = true;
+    for (let i = 0 ; i < text1.length ; i++){
+        for (let j = 0 ; j < text2.length ; j++){
+            if (text1[i] !== text2[j]) flag = false;
+        }
+    }
+    flag === true ? console.log('Hai chuỗi giống nhau!') : console.log('Hai chuỗi khác nhau!')
+    */
+
+    //Bài 6: Viết chương trình nhập vào một mảng ký tự,
+    // tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+    let arr = [ 'c', 's', '-' , 'c', '2', '-' , '6', '1' ];
+    for (let i = 0 ; i < arr.length ; i++){
+        if(arr[i] === '-') arr[i] = '_';
+    }
+    for (let i = 0 ; i < arr.length ; i++){
+        console.log(arr[i]);
+    }
+</script>
+</body>
+</html>

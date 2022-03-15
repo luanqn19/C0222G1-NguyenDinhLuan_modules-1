@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau
+    // let myColor = ["Red", "Green", "White", "Black"];
+    // alert(myColor.join());
+
+    //Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn
+    // let string = prompt('Input number: ');
+    // let result = [string[0]];
+    // for(let i = 1 ; i < string.length ; i++){
+    //     if(string[i] % 2 === 0 && string[i - 1]  % 2 === 0) result.push('-',string[i]);
+    //     else result.push(string[i]);
+    // }
+    // console.log(result.join(''));
+
+    //Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường
+    //trong chuỗi vừa nhập sang thành dạng chữ hoa
+    let str = prompt('Input text: ');
+    let result = [];
+    for(let i = 0 ; i < str.length ; i++){
+        if(str[i] >= 'a' && str[i] <= 'z') result.push(str[i].toUpperCase());
+        else if(str[i] >= 'A' && str[i] <= 'Z') result.push(str[i].toLowerCase());
+        else result.push(str[i]);
+    }
+    console.log(result.join(''));
+</script>
+</body>
+</html>

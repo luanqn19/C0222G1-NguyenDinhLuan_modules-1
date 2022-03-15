@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 11</title>
+    <style>
+        div{
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center">Menu</h1>
+<div><label for="1"><input type="checkbox" id="1" onclick="visbleTextBox(this)" >1. Coffee
+    <input type="text" id="valueCf" style="visibility: hidden" value="0"></label></div>
+
+<div><label for="2"><input type="checkbox" id="2" onclick="visbleTextBox(this)">2. Cam vắt
+    <input type="text" id="valueOrg" style="visibility: hidden" value="0"></label></div>
+
+<div><label for="3"><input type="checkbox" id="3" onclick="visbleTextBox(this)">3. Nước ép cà rốt
+    <input type="text" id="valueCr" style="visibility: hidden" value="0"></label></div>
+
+<div><label for="4"><input type="checkbox" id="4" onclick="visbleTextBox(this)">4. Nước ép cà chua
+    <input type="text" id="valueCa" style="visibility: hidden" value="0"></label></div>
+
+<div><label for="5"><input type="checkbox" id="5" onclick="visbleTextBox(this)">5. Nước lọc
+    <input type="text" id="valueLoc" style="visibility: hidden" value="0"></label></div>
+
+<div><label for="6"><input type="checkbox" id="6" onclick="visbleTextBox(this)">6. Nước dừa
+    <input type="text" id="valueDua" style="visibility: hidden" value="0"></label></div>
+
+<div><label for="7"><input type="checkbox" id="7" >7. Thoát</label></div>
+<input type="button" value="Tính Tiền" onclick="tinhTong()">
+<p id="display"></p>
+<script>
+    "use strict";
+    let isCheckedCf  = document.getElementById('1');
+    let visCf = document.getElementById('valueCf');
+    let isCheckedOrg  = document.getElementById('2');
+    let visOrg = document.getElementById('valueOrg');
+    let isCheckedCr  = document.getElementById('3');
+    let visCr = document.getElementById('valueCr');
+    let isCheckedCa  = document.getElementById('4');
+    let visCa = document.getElementById('valueCa');
+    let isCheckedLoc  = document.getElementById('5');
+    let visLoc = document.getElementById('valueLoc');
+    let isCheckedDua  = document.getElementById('6');
+    let visDua = document.getElementById('valueDua');
+    let total = 0;
+    function tinhTong() {
+        total += visCf.value * 10000 + visOrg.value * 15000 + visCr.value * 15000 + visCa.value * 15000
+        + visLoc.value * 10000 + visDua.value * 15000;
+        alert('Tong so tien can thanh toan: ' + total);
+    }
+    function visbleTextBox(x) {
+        switch (x) {
+            case isCheckedCf:
+                if (isCheckedCf.checked === true) {
+                    visCf.style.visibility = 'unset';
+                }
+                else visCf.style.visibility = 'hidden';
+                break;
+            case isCheckedOrg:
+                if (isCheckedOrg.checked === true) {
+                    visOrg.style.visibility = 'unset';
+                }
+                else visOrg.style.visibility = 'hidden';
+                break;
+            case isCheckedCr:
+                if (isCheckedCr.checked === true) {
+                    visCr.style.visibility = 'unset';
+                }
+                else visCr.style.visibility = 'hidden';
+                break;
+            case isCheckedCa:
+                if (isCheckedCa.checked === true) {
+                    visCa.style.visibility = 'unset';
+                }
+                else visCa.style.visibility = 'hidden';
+                break;
+            case isCheckedLoc:
+                if (isCheckedLoc.checked === true) {
+                    visLoc.style.visibility = 'unset';
+                }
+                else visLoc.style.visibility = 'hidden';
+                break;
+            case isCheckedDua:
+                if (isCheckedDua.checked === true) {
+                    visDua.style.visibility = 'unset';
+                }
+                else visDua.style.visibility = 'hidden';
+                break;
+        }
+    }
+    let key = parseInt(prompt("Moi quy khach lua chon"));
+    do{
+        switch (key) {
+            case 1:
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
+    }while (key !== 7)
+</script>
+</body>
+</html>

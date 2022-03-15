@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    // Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+    // Bài này em chỉ giải khi có một số cần tìm được tìm thấy.
+    let arrayNum = new Array(10);
+    let index = 0;
+    let count = 0;
+    let x = parseInt(prompt('Input number: '));
+    for(let i = 0 ; i < 10 ; i++){
+        arrayNum[i] = Math.floor((Math.random() * 10) + 1);
+    }
+    console.log('Mảng ban đầu: ');
+    for (let i = 0 ; i < 10 ; i++){
+        console.log(arrayNum[i]);
+    }
+    for (let i = 0 ; i < 10 ; i++){
+        if(arrayNum[i] === x){
+            index = i;
+            count++;
+        }
+    }
+    console.log('count: ' + count);
+    arrayNum.splice(index, 1);
+    console.log('Mảng sau khi xoá: ');
+    for (let i = 0 ; i <= arrayNum.length - count ; i++){
+        console.log(arrayNum[i]);
+    }
+</script>
+</body>
+</html>

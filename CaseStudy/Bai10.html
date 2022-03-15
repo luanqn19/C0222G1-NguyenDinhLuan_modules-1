@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 10</title>
+</head>
+<body>
+<script>
+let string = prompt('Nhap so: ');
+let display = "";
+function libText(char) {
+    switch (char) {
+        case '0':
+            display += "không ";
+            break;
+        case '1':
+            display += "một ";
+            break;
+        case '2':
+            display += "hai ";
+            break;
+        case '3':
+            display += "ba ";
+            break;
+        case '4':
+            display += "bốn ";
+            break;
+        case '5':
+            display += "năm ";
+            break;
+        case '6':
+            display += "sáu ";
+            break;
+        case '7':
+            display += "bảy ";
+            break;
+        case '8':
+            display += "tám ";
+            break;
+        case '9':
+            display += "chín ";
+            break;
+    }
+}
+for(let i = 0 ; i < string.length ; i++){
+    libText(string[i]);
+}
+console.log('Chuoi so vua nhap : ' + display);
+</script>
+</body>
+</html>

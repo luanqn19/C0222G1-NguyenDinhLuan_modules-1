@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+    let arrayNum = new Array(10);
+    let average = 0;
+    for(let i = 0 ; i < 10 ; i++){
+        arrayNum[i] = Math.floor((Math.random() * 100) + 1);
+    }
+    console.log('Mảng ban đầu: ');
+    for (let i = 0 ; i < 10 ; i++){
+        console.log(arrayNum[i]);
+    }
+    console.log('Mảng sau khi đảo ngược: ');
+    console.log(arrayNum.reverse());
+</script>
+</body>
+</html>

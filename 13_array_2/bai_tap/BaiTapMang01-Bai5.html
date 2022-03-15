@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+<body>
+<script>
+    "use strict";
+    //Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi
+    let arrayNum = new Array(10);
+    let count = 0;
+    for(let i = 0 ; i < 10 ; i++){
+        arrayNum[i] = Math.floor((Math.random() * 10) - 5);
+    }
+    console.log('Mảng ban đầu: ');
+    for (let i = 0 ; i < 10 ; i++){
+        console.log(arrayNum[i]);
+    }
+    for (let i = 0 ; i < 10 ; i++){
+        if(arrayNum[i] < 0) count++;
+    }
+    console.log('Có ' + count + ' số nguyên âm trong mảng');
+</script>
+</body>
+</html>
