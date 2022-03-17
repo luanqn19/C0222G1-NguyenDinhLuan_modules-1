@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    let str = 'rodtor';
+
+    function isPalindrome(a) {
+        if(a.length === 1){
+            return true;
+        }else if(a.length === 2){
+            return a[0] === a[1];
+        }else {
+            if (a[0] === a[a.length-1]){
+                return isPalindrome(a.toString().slice(1,-1));
+            }
+        }
+    }
+    if (isPalindrome(str)) console.log('Chuoi doi xung!');
+    else console.log('Chuoi khong doi xung!');
+</script>
+</body>
+</html>

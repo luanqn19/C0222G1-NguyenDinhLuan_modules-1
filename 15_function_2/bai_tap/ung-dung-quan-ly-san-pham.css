@@ -1,0 +1,53 @@
+#container-input {
+    background-color: lightgray;
+    width: 50%;
+    height: 110px;
+    border-radius: 5px;
+}
+
+#input-product {
+    padding-left: 10px;
+    margin: 35px 20px;
+    width: 380px;
+    height: 30px;
+}
+
+button {
+    border: limegreen;
+    background-color: limegreen;
+    padding: 10px;
+    width: 65px;
+    border-radius: 5px;
+    color: white;
+}
+
+table {
+    width: 50%;
+}
+
+td {
+    height: 65px;
+    padding: 0;
+    margin: 0;
+}
+
+.btnCustom {
+    width: 70px;
+}
+
+.nameCustom {
+    width: 150px;
+}
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+
+th {
+    background-color: white !important;
+}
+
+.nameSp {
+    background-color: transparent;
+    border: none;
+}

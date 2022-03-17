@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let input = parseInt(prompt('Input value: '));
+    function footToMeter(foot){
+        return parseFloat(0.305 * foot);
+    }
+
+    function meterToFoot(meter){
+        return parseFloat(3.279 * meter);
+    }
+
+    let key = parseInt(prompt('1. Feet to Meter - 2. Meter to Feet'));
+    switch (key) {
+        case 1:
+            alert('Meter: ' + footToMeter(input));
+            break;
+        case 2:
+            alert('Foot: ' + meterToFoot(input));
+            break;
+    }
+
+</script>
+</body>
+</html>

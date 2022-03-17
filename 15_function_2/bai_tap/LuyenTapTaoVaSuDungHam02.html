@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<div>
+    <p onclick="tinhBinhPhuong()">Click Here Exercise 1</p>
+</div>
+<div>
+    <p onclick="calculate()">Click Here Exercise 2</p>
+</div>
+<div>
+    <p onclick="calculate1()">Click Here Exercise 3</p>
+</div>
+<div>
+    <p onclick="isNum()">Click Here Exercise 4</p>
+</div>
+<div>
+    <p onclick="maxValue()">Click Here Exercise 5</p>
+</div>
+<div>
+    <p onclick="nguyenDuong()">Click Here Exercise 6</p>
+</div>
+<div>
+    <p onclick="changeValue()">Click Here Exercise 7</p>
+</div>
+<div>
+    <p id="reverseArray">Click Here Exercise 8</p>
+</div>
+<div>
+    <p id="searchChar">Click Here Exercise 9</p>
+</div>
+
+<script>
+    //Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    /*
+    function tinhBinhPhuong() {
+        let val = parseInt(prompt('Input number: '));
+        return alert(Math.pow(val, 2));
+    }*/
+
+    //Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    /*
+    function calculate() {
+        let val = parseInt(prompt('Input radius: '));
+        return alert('Area: ' + (Math.pow(val,2)*Math.PI).toFixed(3) + '; CV: ' + (2 * val * Math.PI).toFixed(3));
+    }*/
+
+    //Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    /*
+    function calculate1() {
+        let giaiThua = 1;
+        let x = parseInt(prompt('Input number: '));
+        if (x === 1) alert('Giá trị là: ' + 1);
+        else{
+            for (let i = 2 ; i <= x ; i++){
+                giaiThua *= i;
+            }
+            alert('Giá trị là: ' + giaiThua);
+        }
+    }*/
+
+    //Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+    // Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+    /*
+    function isNum() {
+        let x = parseInt(prompt('Input number: '));
+        if (!isNaN(x))   return alert('true');
+        else return alert('false');
+    }*/
+
+    //Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    /*
+    function maxValue() {
+        let x = parseInt(prompt('Input number x: '));
+        let y = parseInt(prompt('Input number y: '));
+        let z = parseInt(prompt('Input number z: '));
+        return alert('Số lớn nhất: ' + Math.max(x, y, z));
+    }*/
+
+    //Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    // Nếu là nguyên dương trả về true, ngược lại trả về false.
+    /*
+    function nguyenDuong() {
+        let x = parseInt(prompt('Input number: '));
+        if (x >= 0) return alert('true');
+        else return alert('false');
+    }*/
+
+    //Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+    /*
+    function changeValue(){
+        let a = parseInt(prompt('Input a: '));
+        let b = parseInt(prompt('Input b: '));
+        let temp = a;
+        a = b;
+        b = temp;
+        return alert('a: ' + a + ', b: ' + b);
+    }*/
+
+    //Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    /*
+    let a = [1,5,3,7,85,4];
+    let textListener = document.getElementById('reverseArray');
+    textListener.addEventListener('click', function () {
+        reverseFun(a);
+    })
+
+    function reverseFun(arr) {
+        arr.reverse();
+        return alert(arr);
+    }*/
+
+    //Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+    // kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó,
+    // nếu không trả về -1.
+    let textSearch = document.getElementById('searchChar');
+
+    textSearch.addEventListener('click', function () {
+        let str = prompt('Input text: ');
+        let inputChar = prompt('Input Character: ');
+        searchCharacter(str, inputChar);
+    });
+
+    function searchCharacter(x, y) {
+        console.log(x);
+        console.log(y);
+        let count = 0;
+        for (let i = 0 ; i < x.length ; i++){
+            if(x[i] === y){
+                console.log('Over here');
+                count++;
+            }
+        }
+        if (count !== 0) return alert('Số lần xuất hiện của ' + y + ' : ' + count);
+        else return alert('-1');
+    }
+
+
+
+</script>
+</body>
+</html>
