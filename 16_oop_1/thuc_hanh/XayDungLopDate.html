@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Xây dựng lớp Date</title>
+</head>
+<body>
+<script>
+    let MyDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+        this.setDate = function (day, month, year) {
+            let str;
+            if (day.toString().length === 1)   this.day = ('0' + day.toString());
+            if (month.toString().length === 1)   this.month = ('0' + month.toString());
+            this.year = year.toString();
+            str = this.day + '/' + this.month + '/' + this.year;
+            return str;
+        }
+    };
+
+    let date = new MyDate(2,2,1990);
+    // let day = date.getDay();
+    // let month = date.getMonth();
+    // let year = date.getYear();
+    // alert(day + '/' + month + '/' + year);
+
+    // day = date.setDay(18);
+    // month = date.setMonth(3);
+    // year = date.setYear(2022);
+    // alert(day + '/' + month + '/' + year);
+
+    alert(date.setDate(9,3,2022));
+</script>
+
+
+</body>
+</html>

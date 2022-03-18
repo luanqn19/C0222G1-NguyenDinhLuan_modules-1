@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Funny circles</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class Circle {
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+
+    }
+
+    function createCircle() {
+        let ctx = document.getElementById('myCanvas').getContext('2d');
+        let circle = new Circle(50, 50, 50);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+
+    function randomRadiusCircle() {
+        let ctx = document.getElementById('myCanvas').getContext('2d');
+        let circle = new Circle(100, 100, Math.floor((Math.random() * 50) + 10));
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+
+    // Random Color red - green - blue
+
+    function randomColorCircle() {
+        let ctx = document.getElementById('myCanvas').getContext('2d');
+        let circle = new Circle(100, 100, Math.floor((Math.random() * 50) + 10));
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = cr.toString();
+        ctx.fill();
+    }
+
+    //Math.floor((Math.random() * 1000) + 100)
+    // Math.random() * window.innerWidth
+    // Math.random() * window.innerHeight
+    function randomPostionCircle() {
+        let cr = 'rgb('+
+            Math.floor(Math.random()*256)+','+
+            Math.floor(Math.random()*256)+','+
+            Math.floor(Math.random()*256)+')';
+
+        let ctx = document.getElementById('myCanvas').getContext('2d');
+        let circle = new Circle(Math.random() * window.innerWidth,
+            Math.random() * window.innerHeight,
+            Math.floor((Math.random() * 50) + 10));
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = cr.toString();
+        ctx.fill();
+    }
+    let arr = [];
+    for (let i = 0 ; i < 50 ; i++){
+        randomPostionCircle();
+    }
+
+    // createCircle();
+    // randomRadiusCircle();
+    // randomColorCircle();
+    // randomPostionCircle();
+
+
+</script>
+</body>
+</html>

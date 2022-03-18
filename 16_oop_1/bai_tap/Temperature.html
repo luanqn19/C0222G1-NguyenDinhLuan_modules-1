@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        celsius;
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+        convertToFahrenheit(){
+            return ((this.celsius * 1.8) + 32).toFixed(3);
+        }
+        convertToKevin(){
+            return (this.celsius + 273.15);
+        }
+    }
+    let inputTemp;
+    do {
+        inputTemp = parseInt(prompt('Input celsius: '));
+
+    }while (inputTemp < -273 || isNaN(inputTemp));
+    let temp = new Temperature(inputTemp);
+    alert('Fahrenheit: ' + temp.convertToFahrenheit());
+    alert('Kevin: ' + temp.convertToKevin());
+</script>
+</body>
+</html>
